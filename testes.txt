@@ -16,3 +16,11 @@
   )
 )
 (fatorial 5)
+
+(define (pos lista atomo)
+  (if (eq? (car lista) atomo)
+      0
+  (+ 1 (pos (cdr lista) atomo))
+  )
+)
+(display (pos '(A B C D) 'C))
