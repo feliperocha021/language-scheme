@@ -1,0 +1,18 @@
+(define (square x)
+  (* x x))
+(square 4)
+
+(define sum
+  (lambda (a b c)
+    (+ a b c)))
+(sum 4 5 6)
+
+((lambda(x y z) (+ x y z)) 4 5 6)
+
+(define (fatorial n)
+  (if (= n 0)
+      1
+  (* n (fatorial (- n 1)))
+  )
+)
+(fatorial 5)
