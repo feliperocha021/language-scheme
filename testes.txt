@@ -12,15 +12,31 @@
 (define (fatorial n)
   (if (= n 0)
       1
-  (* n (fatorial (- n 1)))
-  )
+      (* n (fatorial (- n 1)))
+      )
 )
 (fatorial 5)
 
 (define (pos lista atomo)
   (if (eq? (car lista) atomo)
       0
-  (+ 1 (pos (cdr lista) atomo))
-  )
+      (+ 1 (pos (cdr lista) atomo))
+      )
 )
 (display (pos '(A B C D) 'C))
+
+(define (qtd lista)
+  (if (null? lista)
+      0
+      (+ 1 (qtd (cdr lista)))
+      )
+)
+(qtd '(A B C D E))
+
+(define (soma lista)
+  (if (null? lista)
+      0
+      (+ (car lista) (soma (cdr lista)))
+      )
+)
+(soma '(1 2 3))
