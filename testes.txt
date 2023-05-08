@@ -40,3 +40,32 @@
       )
 )
 (soma '(1 2 3))
+
+(define (fib n)
+  (if (= n 0)
+      0
+      (if (= n 1)
+          1
+          (+ (fib (- n 1)) (fib (- n 2))))
+	  )
+  )
+(fib 7)
+
+(define (pot a b)
+  (if (= b 0)
+      1
+      (* a (pot a (- b 1)))
+      )
+  )
+(pot 2 3)
+
+(define (qtdZeros lst)
+  (if (null? lst)
+      0
+      (if (= 0 (car lst))
+          (+ 1 (qtdZeros (cdr lst)))
+          (+ 0 (qtdZeros (cdr lst)))
+          )
+      )
+)
+(qtdZeros '(3 0 2 0))
